@@ -467,13 +467,14 @@ void setup () {
 
 void loop () {
 
-  if (iref<maxr) {
-    u8g2Fonts.setFont(u8g2_font_inr33_mf);            // select u8g2 font from here: https://github.com/olikraus/u8g2/wiki/fntlistall   //u8g2_font_helvR14_tf
-    u8g2Fonts.setCursor(xb, yb);                          // start writing at this position
-    u8g2Fonts.print(String(beat));
-    display.update(); 
-    iref++;
-  } else {
-    delay(10000);
-  }
+//  if (iref<maxr) {
+//    u8g2Fonts.setFont(u8g2_font_inr33_mf);            // select u8g2 font from here: https://github.com/olikraus/u8g2/wiki/fntlistall   //u8g2_font_helvR14_tf
+//    u8g2Fonts.setCursor(xb, yb);                          // start writing at this position
+//    u8g2Fonts.print(String(beat));
+//    display.update(); 
+//    iref++;
+//  } else {
+//    delay(10000);
+//  }
+   delay(10000);
 }
