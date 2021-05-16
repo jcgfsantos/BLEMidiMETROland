@@ -6,7 +6,7 @@ First of all many thanks to Drahoslav Bednář from https://pian.co/ (https://gi
 I have an Roland FP-30 which I love.
 One thing that I missed in this piano is an indication of the rythm of the metronome (without having to use the Piano Partner 2 app). So I decided to make use of the Bluetooth connection with FP-30 and get the beat using an ESP32 and show it in a display.
 
-Without having many experience with a display I picked a LILYGO® TTGO T5 V2.3 2.13 Inch E-Paper Screen (http://www.lilygo.cn/prod_view.aspx?TypeId=50031&Id=1149&FId=t3:50031:3) because it just looks very nice. If I would have to pick a screen now I would probably choose something else because of the refresh limitations of e-paper screens.
+Without having many experience with a display I picked a LILYGO® TTGO T5 V2.3 2.13 Inch E-Paper Screen (http://www.lilygo.cn/prod_view.aspx?TypeId=50031&Id=1149&FId=t3:50031:3, https://github.com/Xinyuan-LilyGO/LilyGo-T5-ink-series) because it just looks very nice. If I would have to pick a screen now I would probably choose something else because of the refresh limitations of e-paper screens.
 
 For the BLE connection I used NimBLE (https://github.com/h2zero/NimBLE-Arduino/). Many thanks to the developers. My code is based on the NimBLE_Client example.
 
