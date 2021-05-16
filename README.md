@@ -1,6 +1,8 @@
 # BLEMidiMETROland
 Display for metronome from Roland FP30 / FP10 with ESP32 BLE.
 
+YouTube video here: https://www.youtube.com/watch?v=GZcshRPVRXY.
+
 First of all many thanks to Drahoslav Bednář from https://pian.co/ (https://github.com/drahoslove/pianco). Without his support I would not be able to develop this code.
 
 I have an Roland FP-30 which I love.
