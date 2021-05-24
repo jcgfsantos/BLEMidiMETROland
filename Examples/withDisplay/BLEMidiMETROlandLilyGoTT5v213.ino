@@ -72,6 +72,11 @@ class ClientCallbacks : public NimBLEClientCallbacks {
     void onDisconnect(NimBLEClient* pClient) {
       Serial.print(pClient->getPeerAddress().toString().c_str());
       Serial.println(" Disconnected - Starting scan");
+      u8g2Fonts.setCursor(10,30);
+      u8g2Fonts.print(" ");
+      display.fillScreen(GxEPD_WHITE);
+      display.update();        
+      
       NimBLEDevice::getScan()->start(scanTime, scanEndedCB);
     };
 
@@ -467,14 +472,12 @@ void setup () {
 
 void loop () {
 
-//  if (iref<maxr) {
-//    u8g2Fonts.setFont(u8g2_font_inr33_mf);            // select u8g2 font from here: https://github.com/olikraus/u8g2/wiki/fntlistall   //u8g2_font_helvR14_tf
-//    u8g2Fonts.setCursor(xb, yb);                          // start writing at this position
-//    u8g2Fonts.print(String(beat));
-//    display.update(); 
-//    iref++;
-//  } else {
-//    delay(10000);
-//  }
-   delay(10000);
+  if(!pClient->isConnected()) { 
+    if (connectToServer()) {
+      Serial.println("Success! we are connected!");
+    } else {
+      Serial.println("Failed to connect");
+    }
+  }
+  delay(10000);
 }
