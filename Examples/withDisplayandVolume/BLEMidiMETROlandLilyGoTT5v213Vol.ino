@@ -176,8 +176,14 @@ void sysexid(){
 
     beat=midibuff[14]*128+midibuff[15];
     iref=0;
+
+    String sbeat="";
+    sbeat=sbeat+(beat < 100 ? " " : "");  
+    sbeat=sbeat+String(beat);
+    
     u8g2Fonts.setCursor(xb, yb);                          // start writing at this position
-    u8g2Fonts.print(String(beat));
+    u8g2Fonts.print(sbeat);     
+     
     display.update(); 
     
   } else if (addr.equals("01000213")){
